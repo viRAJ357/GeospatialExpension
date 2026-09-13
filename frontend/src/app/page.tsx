@@ -191,7 +191,7 @@ export default function AgriVisionEnterprise() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch("http://localhost:5000/predict", {
+      const res = await fetch("https://geospatialexpension-3.onrender.com/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
