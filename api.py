@@ -25,6 +25,16 @@ try:
 except Exception as e:
     print(f"Error loading models: {e}")
 
+@app.route('/', methods=['GET'])
+def health():
+    return jsonify({
+        'status': 'online',
+        'service': 'AgriVision Pro — ML Inference API',
+        'models_loaded': True,
+        'endpoints': ['/predict'],
+        'version': '2.0.0'
+    })
+
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
