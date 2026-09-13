@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #0f0f0f;
+  --foreground: #e5e5e5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #2e2e2e;
+  border-radius: 2px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #3e3e3e;
+}
+
+/* ─── MOBILE RESPONSIVE ─── */
+
+/* Mobile: stack layout vertically */
+@media (max-width: 768px) {
+  /* Full-screen app shell */
+  .app-shell {
+    flex-direction: column !important;
+  }
+
+  /* Sidebar becomes a top drawer on mobile */
+  .sidebar-desktop {
+    display: none !important;
+  }
+
+  /* Mobile nav shown */
+  .mobile-nav {
+    display: flex !important;
+  }
+
+  /* Topbar compact */
+  .topbar-field-selector span {
+    max-width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .topbar-meta {
+    display: none !important;
+  }
+
+  /* Main workspace fills screen */
+  .main-workspace {
+    height: calc(100vh - 48px - 56px);
+    overflow-y: auto;
+  }
+
+  /* GIS card stacks */
+  .hero-card {
+    flex-direction: column !important;
+    height: auto !important;
+    min-height: unset !important;
+  }
+
+  .hero-map {
+    height: 200px !important;
+    min-height: 200px !important;
+  }
+
+  .hero-metrics {
+    width: 100% !important;
+    border-left: none !important;
+    border-top: 1px solid #1e1e1e !important;
+  }
+
+  /* Right column appears below */
+  .analytics-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Chart heights reduce */
+  .chart-container {
+    height: 140px !important;
+  }
+
+  /* Input drawer width */
+  .config-panel {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Tablet: 768px–1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .sidebar-desktop {
+    width: 48px !important;
+  }
+
+  .sidebar-label {
+    display: none !important;
+  }
+
+  .sidebar-section-title {
+    display: none !important;
+  }
+
+  .hero-card {
+    height: 300px !important;
+  }
+
+  .hero-metrics {
+    width: 180px !important;
+  }
+
+  .analytics-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .right-column {
+    grid-column: span 2 !important;
+  }
+
+  .config-panel {
+    width: 320px !important;
+  }
+}
+
+/* Desktop: 1025px+ — default layout */
+@media (min-width: 1025px) {
+  .mobile-nav {
+    display: none !important;
+  }
+
+  .sidebar-desktop {
+    display: flex !important;
+  }
+}

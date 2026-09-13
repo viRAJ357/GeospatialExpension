@@ -6,15 +6,15 @@ Date Saved: 2025-10-02
 
 MODEL PERFORMANCE:
 ------------------------------
-â€¢ water_stress_model.pkl: Accuracy: 0.9867
-â€¢ disease_detection_model.pkl: Accuracy: 0.9700
-â€¢ soil_health_model.pkl: RÂ² Score: 0.9608
-â€¢ irrigation_recommendation_model.pkl: Accuracy: 1.0000
-â€¢ nitrogen_recommendation_model.pkl: RÂ² Score: 0.9997
-â€¢ crop_yield_prediction_model.pkl: RÂ² Score: 0.9355, RMSE: 0.7603
+• water_stress_model.pkl: Accuracy: 0.9990
+• disease_detection_model.pkl: Accuracy: 0.0830
+• soil_health_model.pkl: R² Score: 0.9400
+• irrigation_recommendation_model.pkl: Accuracy: 1.0000
+• nitrogen_recommendation_model.pkl: R² Score: 0.8741
+• crop_yield_prediction_model.pkl: R² Score: 0.9006, RMSE: 0.4129
 
 PREPROCESSING OBJECTS:
 ------------------------------
-â€¢ label_encoders.pkl
-â€¢ feature_scaler.pkl
-â€¢ feature_columns.pkl
+• label_encoders.pkl
+• feature_scaler.pkl
+• feature_columns.pkl
